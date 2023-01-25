@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAI Image Genrator<</title>
+    <link rel="stylesheet" href="css/spinner.css">
+     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+<header class="bg-gray-900">
+  <div class="container mx-auto flex items-center justify-between px-6 py-3">
+    <div>
+        <h2 class="text-white text-2xl font-medium">OpenAI Image Generator</h2>
+    </div>
+    <div>
+        <ul class="list-reset">
+            <li class="inline-block mr-3">
+                <a href="https://beta.openai.com/docs" target="_blank" class="text-white font-medium hover:text-gray-300">OpenAI API Docs</a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+    <section class="bg-gray-200 p-6 rounded-lg">
+        <form id="img-form">
+            <h1 class="text-2xl font-medium">Describe An Image</h1>
+            <div class="my-4">
+                <input type="text" id="prompt" placeholder="Enter text" class="block w-full p-2 rounded-lg border border-gray-400">
+            </div>
+            <div class="my-4">
+                <select name="size" id="size" class="block w-full p-2 rounded-lg border border-gray-400">
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600">Generate</button>
+        </form>
+    </section>
+    <section class="bg-gray-200 p-6 rounded-lg">
+        <div>
+            <h2 class="text-2xl font-medium msg"></h2>
+            <img src="" id="image" alt="" class="w-full  object-cover rounded-lg">
+        </div>
+    </section>
+</main>
+<div class="spinner"></div>
+  </body>
+</html>
